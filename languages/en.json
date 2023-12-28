@@ -1,0 +1,133 @@
+{
+    "commands": {
+        "info": {
+            "name": "info",
+            "description": "Get information about the bot.",
+            "options": {},
+            "reply": {
+                "title": "Bot Information",
+                "version": "Version",
+                "guilds": "Guilds",
+                "author": "Author",
+                "website": "Website",
+                "invite": "Invite"
+            }
+        },
+        "mystats": {
+            "name": "mystats",
+            "description": "View your Statistics.",
+            "options": {},
+            "reply": {
+                "errors": {
+                    "noStats": {
+                        "title": "Error",
+                        "description": "You don't have any statistics yet."
+                    }
+                },
+                "title": "Your Statistics",
+                "description": "Here are your statistics of the last 20 days displayed in a line chart.",
+                "fields": {
+                    "total": "Total UwU's",
+                    "average": "Average UwU's per day",
+                    "best": "Best day",
+                    "worst": "Worst day",
+                    "totalDays": "Total days"
+                }
+            }
+        },
+        "serverstats": {
+            "name": "serverstats",
+            "description": "View the Statistics of the Server.",
+            "options": {},
+            "reply": {
+                "errors": {
+                    "noStats": {
+                        "title": "Error",
+                        "description": "This guild doesn't have any statistics yet."
+                    }
+                },
+                "title": "Server Statistics",
+                "description": "Here are the statistics of the last 20 days displayed in a line chart.",
+                "fields": {
+                    "total": "Total UwU's",
+                    "average": "Average UwU's per day",
+                    "best": "Best day",
+                    "worst": "Worst day",
+                    "totalDays": "Total days"
+                }
+            }
+        },
+        "settings": {
+            "name": "settings",
+            "description": "Change the settings of the bot.",
+            "options": {
+                "language": {
+                    "name": "language",
+                    "description": "Change the language of the bot."
+                },
+                "timeout": {
+                    "name": "timeout",
+                    "description": "Change the timeout settings of the bot.",
+                    "duration": {
+                        "name": "duration",
+                        "description": "Change the duration of the timeout."
+                    },
+                    "enabled": {
+                        "name": "enabled",
+                        "description": "Enable or disable the timeout."
+                    }
+                },
+                "reactions": {
+                    "name": "reactions",
+                    "description": "Set whether the bot should add reactions to messages or not.",
+                    "enabled": {
+                        "name": "enabled",
+                        "description": "Enable or disable reactions."
+                    }
+                }
+            },
+            "reply": {
+                "errors": {
+                    "language": {
+                        "title": "Error",
+                        "description": "The Langugage specified is not supported."
+                    }
+                },
+                "success": {
+                    "title": "Success",
+                    "description": "The Settings have been updated. The new settings are displayed below.",
+                    "language": {
+                        "name": "Language"
+                    },
+                    "timeout": {
+                        "name": "Timeout users"
+                    },
+                    "timeoutDuration": {
+                        "name": "Timeout duration"
+                    },
+                    "reactions": {
+                        "name": "Add Reactions"
+                    }
+                }
+            }
+        }
+    },
+    "errors": {
+        "noReactionPermission": {
+            "title": "Error",
+            "description": "I don't have permission to add reactions to your message. If you dont want me to add reactions, please turn them off using the ``/settings`` command."
+        },
+        "noTimeoutPermission": {
+            "title": "Error",
+            "description": "I don't have permission to timeout members who spam. If you don't want me to timeout members, please turn it off using the ``/settings`` command."
+        }
+    },
+    "modules": {
+        "timeout": {
+            "title": "Timeout",
+            "description": "You have been timed out for spamming UwU's.",
+            "duration": "Duration",
+            "seconds": "seconds"
+        }
+    }
+}

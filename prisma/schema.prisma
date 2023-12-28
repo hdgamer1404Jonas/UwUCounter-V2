@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model data {
+  guildID String @db.VarChar(255)
+  day     String @db.VarChar(255)
+  count   Int
+
+  @@id([guildID, day])
+}
+
+model guild_settings {
+  id       Int     @id @default(autoincrement())
+  guild_id String? @db.VarChar(255)
+  settings String? @db.LongText
+}
+
+model users {
+  idIndex Int    @id @default(autoincrement())
+  id      String @db.VarChar(255)
+  date    String @db.VarChar(255)
+  count   Int?
+}

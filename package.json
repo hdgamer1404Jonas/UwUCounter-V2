@@ -1,0 +1,25 @@
+{
+  "name": "uwucounter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.39",
+    "@prisma/client": "^5.0.0",
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.3.1",
+    "fluxpoint-js": "^2.0.3",
+    "graph.js": "^1.21.1",
+    "mysql2": "^3.2.0",
+    "nekos.life": "^3.0.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.0.0"
+  }
+}

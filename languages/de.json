@@ -1,0 +1,133 @@
+{
+    "commands": {
+        "info": {
+            "name": "info",
+            "description": "Erhalte Informationen über den Bot",
+            "options": {},
+            "reply": {
+                "title": "Bot Informationen",
+                "version": "Version",
+                "guilds": "Gilden",
+                "author": "Author",
+                "website": "Webseite",
+                "invite": "Einladungs Link"
+            }
+        },
+        "mystats": {
+            "name": "meinestatistiken",
+            "description": "Schaue deine Statistiken an.",
+            "options": {},
+            "reply": {
+                "errors": {
+                    "noStats": {
+                        "title": "Fehler",
+                        "description": "Du hast noch keine Statistiken."
+                    }
+                },
+                "title": "Deine Statistiken",
+                "description": "Hier sind deine Statistiken der letzten 20 Tage in einem linien Diagramm.",
+                "fields": {
+                    "total": "Totale UwU's",
+                    "average": "Durchschnittliche UwU's",
+                    "best": "Bester Tag",
+                    "worst": "Schlechtester Tag",
+                    "totalDays": "Totale Tage"
+                }
+            }
+        },
+        "serverstats": {
+            "name": "serverstatistiken",
+            "description": "Schaue dir die Statistiken des Servers an.",
+            "options": {},
+            "reply": {
+                "errors": {
+                    "noStats": {
+                        "title": "Fehler",
+                        "description": "Diese Gilde hat noch keine Statistiken."
+                    }
+                },
+                "title": "Server Statistiken",
+                "description": "Hier sind die Statistiken der letzten 20 Tage in einem linien Diagramm.",
+                "fields": {
+                    "total": "Totale UwU's",
+                    "average": "Durchschnittliche UwU's",
+                    "best": "Bester Tag",
+                    "worst": "Schlechtester Tag",
+                    "totalDays": "Totale Tage"
+                }
+            }
+        },
+        "settings": {
+            "name": "einstellungen",
+            "description": "Ändere die Einstellungen des Bots.",
+            "options": {
+                "language": {
+                    "name": "sprache",
+                    "description": "Ändere die Sprache des Bots."
+                },
+                "timeout": {
+                    "name": "timeout",
+                    "description": "Ändere die Timeout Einstellungen des Bots.",
+                    "duration": {
+                        "name": "dauer",
+                        "description": "Ändere die Dauer, wie lange ein Mitglied gemutet wird."
+                    },
+                    "enabled": {
+                        "name": "aktiviert",
+                        "description": "Aktiviere oder deaktiviere das muten von Mitgliedern."
+                    }
+                },
+                "reactions": {
+                    "name": "reaktionen",
+                    "description": "Stellen ein, ob der Bot Reaktionen hinzufügen soll oder nicht.",
+                    "enabled": {
+                        "name": "aktiviert",
+                        "description": "Aktiviere oder deaktiviere das hinzufügen von Reaktionen."
+                    }
+                }
+            },
+            "reply": {
+                "errors": {
+                    "language": {
+                        "title": "Fehler",
+                        "description": "Die angegebene Sprache wird nicht unterstützt."
+                    }
+                },
+                "success": {
+                    "title": "Erfolg",
+                    "description": "Die Einstellungen wurden geändert! Die neuen Einstellungen sind:",
+                    "language": {
+                        "name": "Sprache"
+                    },
+                    "timeout": {
+                        "name": "Benutzer Timeout"
+                    },
+                    "timeoutDuration": {
+                        "name": "Timeout Dauer"
+                    },
+                    "reactions": {
+                        "name": "Reaktionen hinzufügen"
+                    }
+                }
+            }
+        }
+    },
+    "errors": {
+        "noReactionPermission": {
+            "title": "Fehler",
+            "description": "Ich habe keine Berechtigungen, um Reaktionen zu der Nachricht hinzuzufügen. Wenn du nicht möchtest, dass ich Reaktionen hinzufüge, schalte dies bitte mit dem ``/einstellungen`` Befehl aus."
+        },
+        "noTimeoutPermission": {
+            "title": "Fehler",
+            "description": "Ich habe keine Berechtigungen, spammende Mitglieder zu muten. Wenn du nicht möchtest, dass ich Mitglieder muten kann, schalte dies bitte mit dem ``/einstellungen`` Befehl aus."
+        }
+    },
+    "modules": {
+        "timeout": {
+            "title": "Timeout",
+            "description": "Du wurdest für das Spammen von UwU's gemutet.",
+            "duration": "Dauer",
+            "seconds": "Sekunden"
+        }
+    }
+}
